@@ -15,14 +15,15 @@ describe('FastTrade Login', () => {
         cy.get('[id="email"]').type('denis.teste@automatico.com.br');
         cy.get('[id="phone"]').type('31985856666');
         cy.get('[formcontrolname="birth_date"]').type('20/08/1990');
-
-        cy.get('[id="btn-form-valid-next"]').click();     
-        
+        cy.get('[id="btn-form-valid-next"]').click();             
         cy.get('[id="zip_code"]').type('35455970');
+        cy.get('[id="btn-zip-code"]').click()
+        /*Após inserir o CEP, as informações de Endereço, Bairro, Cidade e Estado 
+        são preenchidos automaticamente. Por isso não fiz.
+        */
         cy.get('[id="number"]').type('30');
-
-        cy.get('[id="check-box-accept-terms-input"]').click();
-        cy.get('[id="btn-form-valid-next""]').click();      
+        cy.get('[id="check-box-accept-terms"]').click();
+        cy.get('[id="btn-form-valid-next"]').click();      
 
     });
 
